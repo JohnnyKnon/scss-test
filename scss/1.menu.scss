@@ -1,0 +1,82 @@
+$default-color: #999;
+$navhover-color: orange;
+$asidehover-color: red;
+$headerback-color: #eee;
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    // Header
+    header{
+        position: relative;
+        width: 100%;
+        height: 140px;
+        background-color: $headerback-color;
+
+        nav{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            ul{
+                list-style: none;
+
+                li{
+                    display: inline-block;
+
+                    a{
+                        display: block;
+                        margin: 10px 20px;
+                        padding: 5px 3px;
+                        text-decoration: none;
+                        color: $default-color;
+
+                        &:hover{
+                            border-bottom: 1px dotted $navhover-color;
+                            color: $navhover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    aside{
+        position: relative;
+
+        nav{
+            position: fixed;
+            
+
+            ul{
+                list-style: none;
+                padding: 0;
+                margin-top: 30px;
+
+                li{
+                    a{
+                        display: block;
+                        padding: 5px 10px;
+                        color: $default-color;
+                        text-decoration: none;
+
+                        &:hover{
+                            border-bottom: 1px solid $asidehover-color;
+                            color: $asidehover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    article{
+        margin-left: 600px;
+
+        h1{
+            font-weight: bolder;
+        }
+    }
+}
