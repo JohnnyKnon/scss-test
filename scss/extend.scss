@@ -1,0 +1,30 @@
+main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .message{
+        display: inline-block;
+        border: 1px solid #ccc;
+        padding: 10px;
+        color: #333;
+    }
+
+    .success{
+        @extend .message;
+        border-color: green;
+    }
+
+    .error{
+        @extend .message;
+        border-color: red;
+    }
+
+    .warning{
+        @extend .message;
+        border-color: orange;
+    }
+}
+
+
